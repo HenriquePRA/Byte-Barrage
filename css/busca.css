@@ -1,0 +1,23 @@
+body{
+background-image:none;
+background-color: #bebebe;
+}
+section .sp h1{
+    padding: 20px;
+}
+section{
+    margin-top: 30px;
+    width: 80%;
+}
+section div:first-child{
+    height: auto;
+}
+@media(max-width:800px){
+    section{
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+section div img{
+    width: 100%;
+}

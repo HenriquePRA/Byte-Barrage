@@ -1,0 +1,118 @@
+/*----Configuraçoes globais do container*/
+
+body{
+    background-image:none;
+    background-color: #bebebe;
+    }
+
+section{
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 0;
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+    "pt1  ."
+    "pt2 pt2"
+}
+@media(max-width:800px){
+    section{
+        grid-template-columns: 1fr 50px;
+    }
+}
+#pt1{
+    grid-area: pt1;
+}
+#pt2{
+    grid-area: pt2;
+    text-align: center;
+}
+
+#pt2 h1{
+    margin-top: 5%;
+}
+/*----Configuraçoes dos containers internos----*/
+
+section div{
+    width: 100%;
+    height: 100%;
+}
+section div h1{
+    margin-top: 30px;
+    font-size: 30px;
+    padding-left: 20px;
+}
+section div:hover{
+    box-shadow: none;
+}
+section #pt1 p,#pt2 p{
+    margin-left: 80px;
+}
+@media(max-width:450px){
+    section #pt1 p,#pt2 p{
+        margin-left: 20px;
+    }
+}
+.fa-phone{
+    color: #1E9EEC;
+}
+.fa-whatsapp{
+    color: #25d366;
+}
+.fab, .fas{    
+    padding: 20px;
+    font-size: 40px;
+}
+
+.fa-facebook-square{
+    margin-left: 20px;
+}
+@media(max-width: 450px){
+    #pt2 a{
+        display: inline-block;
+    }
+    #pt2{
+        text-align: center;
+    }
+    .fa-facebook-square{
+        margin-left: 0px;
+    }
+}
+
+section #pt1 span{
+    font-size: 26px;
+    font-weight: 700;
+    color: #ff5225
+}
+section div a{
+    background-color: aliceblue;
+    margin: 10px;
+    padding: 0px;
+}
+
+
+/*----Animação----*/
+
+
+#pt2 a i:hover{
+    color:white;
+}
+section #pt2 a:hover{
+    background-color: aliceblue;
+    color: #ff5225;
+}
+#pt2 a .fab:hover{
+    background-color: #ff5225;
+    border-radius: 50%;
+    animation-name: redes;
+    animation-duration: 1s;
+}
+@keyframes redes{
+    from {background-color: aliceblue;
+            border-radius: 5%;
+            color:black;}
+    to {background-color: #ff5225;
+            border-radius: 50%;
+            color: aliceblue;}
+}
