@@ -10,3 +10,6 @@ https://www.teixeiradecarvalho.com.br
 
 https://vivareal.com.br
 
+Requisitos mínimos:
+
+Navegador com suporte a HTML5 e CSS3
