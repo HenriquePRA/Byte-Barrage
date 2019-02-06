@@ -114,6 +114,14 @@ body{
 .menu_principal ul li:hover ul{
     visibility: visible;
 }
+@media(max-width:800px){
+    .menu_principal ul li:hover ul{
+        visibility: hidden;
+    } 
+    .menu_principal ul li:active ul{
+        visibility: visible;
+    }
+}
 
 .menu_principal ul ul li{
     float: none;
@@ -202,9 +210,13 @@ label[for="bt_menu"]{
 .caixa_maior{
     text-align: center;
     display: grid;
-    grid-template-columns: 200px 160px 1fr;
-    grid-auto-rows: 50px 1fr;
+    grid-template-columns: 1fr 1fr 70px;
+    grid-template-rows: 1fr 1fr 2fr;
     grid-column-gap: 5px;
+    grid-template-areas:
+    "tetobox tetobox tetobox"
+    "opcoes1 opcoes2 fas"
+    "caixa_pesquisa caixa_pesquisa fas";
     margin: 0 auto;
     width: 500px;
     height: 150px;
@@ -214,27 +226,59 @@ label[for="bt_menu"]{
     box-shadow: 0px 0px 10px rgba(255, 133, 102, 0.5);
     
 }
+.caixa_pesquisa{
+    grid-area: caixa_pesquisa;
+}
+.caixa_pesquisa input{
+    margin: 10px;
+    padding: 2px;
+    border-radius: 2px;
+    width: 85%;
+}
 
 .caixa_teto{
-    margin-top: 15px;
+    grid-area: tetobox;
     color: white;
-    display: grid;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
+}
+.caixa_form{
+    display: flex;
+    grid-area: opcoes1;
+    background: url(img/down.png) no-repeat 96% 0;
+    height: 29px;
+    overflow: hidden;
+    width: 175px;
+    border-radius: 2px;
+    background-color: #ff8566;
+    color: white;
+    margin: 10% auto 0 13.5%;    
+}
+
+.caixa_teto h2{
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+.caixa_form-2{
+    display: flex;
+    grid-area: opcoes2;
+    background: url(img/down.png) no-repeat 96% 0;
+    height: 29px;
+    overflow: hidden;
+    width: 175px;
+    border-radius: 2px;
+    background-color: #ff8566;
+    color: white;
+    margin: 10% 13% 0 auto;    
 }
 
 select{
     -webkit-appearance: none; 
     -moz-appearance: none;
-    appearance: none; 
     border: none;
     height: 29px;
     padding: 5px;
     font-size: 14px;
-    appearance: 
-    none;
+    transition: background 0.5s;
  }
 select:hover{
     background-color: #ff5225;
@@ -242,46 +286,29 @@ select:hover{
     color: black;
 }
 
-.caixa_form{
-    display: grid;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    margin: 15% 1% auto 10%;
-    background: url(img/down.png) no-repeat 96% 0;
-    height: 29px;
-    overflow: hidden;
-    width: 160px;
-    border-radius: 5px;
-    background-color: #ff8566;
-    color: white;
-}
 
-.caixa_form-2{
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    margin-top: 19%;
-    background: url(img/down.png) no-repeat 96% 0;
-    height: 29px;
-    overflow: hidden;
-    width: 160px;
-    border-radius: 5px;
-    background-color: #ff8566;
-    color: white;
-}
-
-.caixa_maior a i{
-    margin-top: 24%;
-    color: black;
+.caixa_maior .fal{
+    grid-area: fas;
     background-color: white;
-    padding: 6px 25px;
-    border-radius: 5px;
-    margin-left: 8px;
+    border-radius: 2px;
+    height: 40px;
+    width: 40px;
+    margin: 42% 0;
+    transition: background 0.5s, transform 0.5s;
+    animation-name: fal;
+    font-size: 20px;
+}
+.fal:hover{
+    background: #DCFF00;
+    transform: scale(1.2);
+}
+.fal:active{
+    background: #ff5225;
+}
+.fal .fas{
     text-decoration: none;
+    color: black;
+    padding: 11px 0px;
 }
 
 
@@ -332,16 +359,6 @@ select:hover{
    }
 }
 
-a i:hover{ 
-    background-color: #6BB30A;
-    color: #DCFF00;
-}
-a i:active{
-    background-color: #DCFF00;
-    color:black;
-}
-
-
 /*----Area de navegação com ofertas----*/
 
 
@@ -385,6 +402,7 @@ section{
 section div{
     width: 94%;
     height:95%;
+    transition: box-shadow 0.3s;
 }
 
 section div:hover{
@@ -423,6 +441,7 @@ section div a{
     text-align: end;
     align-self: stretch;
     color: black;
+    transition: background .3s;
 
 }
 

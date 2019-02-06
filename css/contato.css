@@ -16,12 +16,7 @@ section{
     "pt1 pos"
     "pt2 pt2"
 }
-@media(max-width:800px){
-    section{
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media(max-width:850px){
+@media(max-width:750px){
     section{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
