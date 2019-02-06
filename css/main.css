@@ -57,29 +57,23 @@ body{
   unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
 
-
 /*---- Criação do menu superior ----*/
-
 
 .himg{
     margin: 0 auto;
 }
-
 .menu_principal{
     width:100vw;
     background-color: #ff5225;
-    border-bottom: 1px solid white;
     display: grid;
     grid-template-columns: 150px 1fr 150px;
     grid-template-rows: 50px;
 }
-
 .menu_principal ul{
     list-style: none;
     position: relative;
     justify-content: flex-start;
 }
-
 .menu_principal ul li{
     width: 150px;
     float: left;
@@ -91,96 +85,65 @@ body{
     background-color: #ff5225;
 }
 .menu_principal a{
-    padding: 15px;
+    padding: 10px;
+    height: 100%;
     display: block;
     text-decoration: none;
     text-align: center;
-    background-color: #ff5225;
     color: white;
+    transition: background 0.5s;
 }
-
+#tipo1{
+    margin: 1px 0 3px 0;
+}
 
 .menu_principal a:hover{
-    background-color: aliceblue;
-    color: black;
+    background-color: rgb(255,82,37);
+    color: #7f2912;
     font-weight: 700;
 }
-
+.menu_principal #tipo1:hover{
+    background-color: whitesmoke;
+    color: #331007;
+}
 .menu_principal ul ul{
     position: absolute;
     visibility: hidden;
 }
-
 .menu_principal ul li:hover ul{
     visibility: visible;
 }
 @media(max-width:800px){
     .menu_principal ul li:hover ul{
-        visibility: hidden;
+        visibility: initial;
     } 
     .menu_principal ul li:active ul{
         visibility: visible;
     }
 }
-
 .menu_principal ul ul li{
     float: none;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid transparent;
 }
-
 .menu_principal ul ul li:last-child a{
     background-color: #6BB30A;
 }
-
 .menu_principal ul ul li:last-child a:hover{
-    background-color: #6BB30A;
-    color: #DCFF00;
+    background-color: #DCFF00;
+    color: #331007;
 }
-
 .menu_principal ul ul li a{
-    background-color: #ff8566;
+    background-color: rgba(255,82,37,0.55);
 }
-
-label[for="bt_menu"]{
-    background-color: #ff5225;
-    color: white;
+.menu_principal ul li a label{
+    font-size: 20px;
+    font-weight: 900;
     text-align: left;
-    font-size: 30px;
-    cursor: pointer;
-    width: 100vw;
-    height: 50px;
-    padding-left: 0;
-    padding-top: 5px;
 }
-
-#bt_menu{
-    display: none;
-}
-
-label[for="bt_menu"]{
-    display: none;
-}
-
-
 /*Aplicação da responsividade no menu superior*/
 
 
 @media(max-width:647px){
-    label[for="bt_menu"]{
-        display: block;
-    }
-
-    #bt_menu:checked ~ .menu_principal{
-        margin-left: 0;
-    }
-
-    .menu_principal{
-        margin-top: 5px;
-        margin-left: -100%;
-        transition: all .4s;
-        width: 150px;        
-    }
-
     .menu_principal ul li{
         width: 100%;
         float: none;
@@ -202,7 +165,6 @@ label[for="bt_menu"]{
         display: none;
     }
 }
-
 
 /*----criação da caixa de pesquisa flutuante ----*/
 
@@ -293,7 +255,7 @@ select:hover{
     border-radius: 2px;
     height: 40px;
     width: 40px;
-    margin: 42% 0;
+    margin: 30px 0;
     transition: background 0.5s, transform 0.5s;
     animation-name: fal;
     font-size: 20px;
@@ -310,53 +272,62 @@ select:hover{
     color: black;
     padding: 11px 0px;
 }
-
+.caixa_maior .fal span{
+    visibility: hidden;
+}
 
 /*----responsividade da caixa de pesquisa flutuante ----*/
 
 
-
 @media(max-width:647px){
-   .caixa_maior{
-        grid-template-columns: 150px 150px;
-        grid-auto-rows: 1fr 1fr 1fr 1fr;
+    .caixa_maior{
         width: 300px;
-        margin-top: 150px;
-   }
-   .caixa_teto{
+        height: 190px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 70px;
+        grid-template-areas:
+        "tetobox tetobox"
+        "opcoes1 opcoes2"
+        "caixa_pesquisa caixa_pesquisa"
+        "fas fas";
+    }
+    .caixa_teto{
        margin: 10px auto;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-   }   
-   .caixa_teto h2{
+    }   
+    .caixa_teto h2{
         font-size:20px;       
-   }
-   .caixa_form{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        width: 120px;
-        margin: 5% 0 auto 15%;
-   }
-   .caixa_form-2{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 4;
-        grid-row-end: 5;
-        width: 120px;
+    }
+    .caixa_form{
+        width: 122px;
+        margin: 5% 0 auto 13%;
+    }
+    .caixa_form-2{
+        width: 122px;
         margin: 5% 0 auto 5%;
-   }
-   .caixa_maior a{
-        margin: 0 0;
-        grid-column-start: 1;
-        grid-column-end: 3;
-   }
-   .caixa_maior a i{
+    }
+    .caixa_maior a i{
        margin: 0 auto;
-   }
+    }
+    .caixa_maior .fal{
+        margin: 10px auto 0 auto;
+        height: 30px;
+        width: auto;
+        width: 120px;
+        padding: 0;
+    }
+    .caixa_maior .fal span{
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+        visibility: visible;
+    }
+    .fal .fas{
+        padding: 5px 0;
+    }
+    .fal a:-webkit-any-link{
+        text-decoration: none;
+        color: black;
+    }
 }
 
 /*----Area de navegação com ofertas----*/

@@ -4,7 +4,16 @@ body{
     background-image:none;
     background-color: #bebebe;
     }
-
+.menu_principal ul ul li a{
+        background-color: rgb(255,82,37);
+}
+.menu_principal ul ul li a:hover{
+    background-color: #ffb9a7;
+}
+.menu_principal ul ul li{
+    float: none;
+    border-bottom: 2px solid aliceblue;
+}
 section{
     margin-top: 30px;
     width: 100%;
