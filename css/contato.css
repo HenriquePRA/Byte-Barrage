@@ -25,10 +25,24 @@ section{
     "pt1 pos"
     "pt2 pt2"
 }
+
+
+@media(max-width:600px){
+   .menu{
+    visibility: hidden;
+    }
+    .menu_principal ul li a label{
+        font-size: 25px;
+    }
+    .menu_principal a{
+        padding-top: 5px;
+    }
+}
+
 @media(max-width:750px){
     section{
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 2.1fr 2fr 1fr;
         grid-template-areas: 
         "pt1"
         "pos"
@@ -51,6 +65,21 @@ section{
         height: 600px;
     }
 }
+@media(max-width:750px){
+    #pos iframe{
+        width: 500px;
+    }
+}
+@media(max-width:550px){
+    #pos iframe{
+        width:400px;
+    }
+}
+@media(max-width:420px){
+    #pos iframe{
+        width:300px;
+    }
+}
 #pt1{
     grid-area: pt1;
 }
@@ -64,6 +93,55 @@ section{
 }
 /*----Configuraçoes dos containers internos----*/
 
+#pt2{
+    margin: 0 auto;
+    display: grid;
+    width: 700px;
+    height: 300px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 3px;
+    grid-template-areas:
+    "msg msg msg msg"
+    "face inst link twtt"
+}
+@media(max-width: 750px){
+    #pt2{
+        width: 500px;
+    }
+}
+@media(max-width:600px){
+    #pt2{
+        width: 400px;
+        margin-bottom: 50px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-areas:
+        "msg msg"
+        "face inst"
+        "link twtt";
+    }
+}
+@media(max-width:420px){
+    #pt2{
+        width: 300px;
+    }
+}
+#msg{
+    grid-area: msg;
+}
+#face{
+    grid-area: face;
+}
+#inst{
+    grid-area: inst;
+}
+#link{
+    grid-area: link
+}
+#twtt{
+    grid-area: twtt;
+}
 section div{
     width: 100%;
     height: 100%;

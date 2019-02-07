@@ -165,6 +165,17 @@ body{
         display: none;
     }
 }
+@media(max-width:600px){
+    .menu{
+     visibility: hidden;
+     }
+     .menu_principal ul li a label{
+         font-size: 25px;
+     }
+     .menu_principal a{
+         padding-top: 5px;
+     }
+ }
 
 /*----criação da caixa de pesquisa flutuante ----*/
 
