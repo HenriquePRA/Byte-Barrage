@@ -8,8 +8,8 @@
 body{
     font-family: 'Open Sans', sans-serif;
     background: url(../img/logo_12002.jpg) no-repeat top center fixed;
-    background-color: #bebebe;
     background-attachment: scroll;
+    background-color: #cccccc;
 }
 
 
@@ -19,21 +19,18 @@ body{
 @media(max-width:647px){
     body{
         background: url(../img/logo_100-599px.jpg) no-repeat top center fixed;
-        background-color: #ffdcd3;
         background-attachment: scroll;       
     } 
 }
 @media(min-width:1900px){
     body{
         background-size: 100vw 35vw;
-        background-color: #ffdcd3;
         background-attachment: scroll;
     }
 }
 @media(min-width:1950px){
     body{
         background-size: 100vw 33vw;
-        background-color: #ffdcd3;
         background-attachment: scroll;
     }
 }
