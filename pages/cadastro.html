@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/cadastro.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -26,11 +27,21 @@
     </header>
     <div id="formulario">
         <h2 class="frase">Página de cadastro</h2>
-        <form class="frm">
-            
+        <form class="frm1" id="nome">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" class="controle" class="bot">
         </form>
-        <form class="frm2">
-
+        <form class="frm1" id="email"
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" class="controle" class="bot">
+        </form>
+        <form class="frm2" id="sobrenome">
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" class="controle">
+        </form>
+        <form class="frm2" id="confemail">            
+            <label for="c-email">Confirmação do E-mail:</label>
+            <input type="email" name="c-email" class="controle" class="bot">
         </form>
     </div>
     <footer>

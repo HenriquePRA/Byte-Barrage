@@ -1,13 +1,33 @@
 body{
-background-image:none;
-background-color: #bebebe;
+    background-image: none;
+    background:linear-gradient(135deg, #e66465, #9198e5);
+    animation-name: branco;
+    animation-duration: 2s;
+}
+@keyframes branco{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
 }
 section .sp h1{
     padding: 20px;
 }
 section{
-    margin-top: 30px;
+    margin-top: 0px;
     width: 80%;
+}
+@media(min-width:1900px){
+    section{
+        background-color: rgba(214,219,223,0.5);
+        border-radius: 0 0 0 0;
+    }
+    #imoveis{
+        border-top: none;
+    }
 }
 section div:first-child{
     height: auto;
@@ -16,6 +36,85 @@ section div:first-child{
     section{
         width: 100%;
         border-radius: 0px;
+    }
+}
+.sp{
+    width: 85%;;
+    opacity: 1;
+    background: linear-gradient(to left,#E66465,#9198e5);
+    border-right: 4px solid rgba(0, 0, 0, 0.5);
+    -webkit-animation-name: entrada;
+    animation-name: entrada;
+    animation-delay: 0.2s;
+    animation-duration: 2s;
+    animation-fill-mode: both;    
+}
+@keyframes entrada {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(-3000px, 0, 0);
+      transform: translate3d(-3000px, 0, 0);
+      background: linear-gradient(to left,#FF4345,rgb(91,104,255));
+      
+    }
+  
+    60% {
+      opacity: 0.2;
+      -webkit-transform: translate3d(25px, 0, 0);
+      transform: translate3d(25px, 0, 0);
+      width: 45%;
+    }
+  
+    75% {
+      -webkit-transform: translate3d(-10px, 0, 0);
+      transform: translate3d(-10px, 0, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(5px, 0, 0);
+      transform: translate3d(5px, 0, 0);
+      opacity: 1;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      width: 85%;
+    }
+}
+.menu_principal ul{
+    z-index:1;
+    position:relative;
+}
+.menu_principal ul li:hover ul{
+    z-index: 1;
+}
+section .imovel1, .imovel2, .imovel3, .imovel4, .imovel5, .imovel6, .imovel7, .imovel8{
+    animation-name: blocos;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes blocos{
+    0%{
+        opacity: 0;        
+    }
+    50%{
+        filter: grayscale(100%)
+    }
+    100%{
+        opacity: 1;
+        filter: grayscale(0%)
     }
 }
 section div img{

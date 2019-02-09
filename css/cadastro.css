@@ -8,6 +8,7 @@ body{
     background-color: rgb(0, 238, 255,0.2);
     background-blend-mode: screen;
     background-size: cover;
+    font-family: 'Raleway', sans-serif;
     }
 
 #formulario{
@@ -15,18 +16,51 @@ body{
     width: 800px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 150px 1fr 1fr 50px 1fr 4fr;
     grid-template-areas:
     "frase frase"
-    "frm1 frm2";
+    "nome sobrenome"
+    "email confemail"
+    ". ."
+    "log"
+    ;
     height:975px;
-    background-color: rgba(34, 34, 34, 0.75);
+    background-color: #FFFF;
 }
 .frase{
     grid-area: frase;
-    color: rgba(240,248,255,0.8);
+    color: black;
     text-align: center;
     padding: 30px 0px;
+}
+.frm1{
+    margin: 0 5%;
+    grid-area: frm1;
+}
+.frm2{
+    margin: 0 5%;
+    grid-area: frm2;
+}
+#nome{
+    grid-area: nome;
+}
+#sobrenome{
+    grid-area: sobrenome;
+}
+#email{
+    grid-area: email
+}
+#confemail{
+    grid-area: confemail
+}
+#login{
+    grid-area: login
+}
+#senha{
+    grid-area: senha
+}
+#csenha{
+    grid-area: csenha;
 }
 @media(max-width:820px){
     #formulario{
@@ -38,6 +72,35 @@ body{
         width: 90%;
     }
 }
+.controle{
+    display: block;
+    border-style: none none solid none;
+    border-color: #ccc;
+    border-width: 0 0 2px 0;
+    height: 34px;
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
     position: static;
     bottom: 0;

@@ -2,8 +2,9 @@
 
 body{
     background-image:none;
-    background-color: #bebebe;
+    background: linear-gradient(135deg, #e66465, #9198e5);
     }
+
 .menu_principal ul ul li a{
         background-color: rgb(255,82,37);
 }
@@ -12,18 +13,20 @@ body{
 }
 .menu_principal ul ul li{
     float: none;
-    border-bottom: 2px solid aliceblue;
+    border-bottom: 2px solid #FFFF;
 }
+
 section{
-    margin-top: 30px;
-    width: 100%;
+    margin: 30px auto;
+    width: 95%;
     border-radius: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 1fr;
     grid-template-areas:
     "pt1 pos"
-    "pt2 pt2"
+    "pt2 pt2";
+    background-color: rgba(214,219,223,0.7);
 }
 
 @media(max-width:600px){
@@ -45,7 +48,7 @@ section{
         grid-template-areas: 
         "pt1"
         "pos"
-        "pt2"
+        "pt2";
     }
 }
 #pos{
@@ -144,6 +147,7 @@ section{
 section div{
     width: 100%;
     height: 100%;
+    background-color:rgba(1,1,1,0.0);
 }
 section div h1{
     margin-top: 30px;
@@ -193,9 +197,12 @@ section #pt1 span{
     color: #ff5225
 }
 section div a{
-    background-color: aliceblue;
+    background-color: rgba(1,1,1,0.0);
     margin: 10px;
     padding: 0px;
+}
+section div a:hover{
+    background-color: rgba(1,1,1,0.0);
 }
 
 
@@ -204,14 +211,6 @@ section div a{
 
 #pt2 a i:hover{
     color:white;
-}
-section #pt2 a:hover{
-    background-color: aliceblue;
-    color: #ff5225;
-}
-#pt2 a .fab:hover{
-    background-color: #ff5225;
-    border-radius: 50%;
     animation-name: redes;
     animation-duration: 1s;
 }
@@ -222,4 +221,10 @@ section #pt2 a:hover{
     to {background-color: #ff5225;
             border-radius: 50%;
             color: aliceblue;}
+}
+footer{
+    width: 100%;
+}
+.menu_principal{
+    width: 100%;
 }

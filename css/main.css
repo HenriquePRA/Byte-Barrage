@@ -7,31 +7,32 @@
 }
 body{
     font-family: 'Open Sans', sans-serif;
-    background: url(../img/logo_12002.jpg) no-repeat top center fixed;
+    background: url(../img/logo_12002.jpg) no-repeat top center fixed,linear-gradient(135deg, #e66465, #9198e5);
     background-attachment: scroll;
-    background-color: #cccccc;
+    animation-name: branco;
+    animation-duration: 2s;
 }
 
-
+@keyframes branco{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 /*----aplicação da responsividade no background----*/
 
 
 @media(max-width:647px){
     body{
-        background: url(../img/logo_100-599px.jpg) no-repeat top center fixed;
-        background-attachment: scroll;       
+        background: url(../img/logo_100-599px.jpg) no-repeat top center fixed,linear-gradient(135deg, #e66465, #9198e5);
+        background-attachment: scroll;      
     } 
 }
 @media(min-width:1900px){
     body{
-        background-size: 100vw 35vw;
-        background-attachment: scroll;
-    }
-}
-@media(min-width:1950px){
-    body{
-        background-size: 100vw 33vw;
-        background-attachment: scroll;
+        background-size: 100vw auto;
     }
 }
 
@@ -345,13 +346,11 @@ select:hover{
 
 section{
     display: grid;
-    background-color: azure;
+    background-color: rgba(214,219,223,0.5);
     width: 1000px;
     height: 1100px;
     margin: 0 auto;
-    border-radius: 5px 5px 0px 0px;
     margin-top: 300px;
-    margin-bottom: 25px;
 }
 
 @media(max-width:1000px){
@@ -369,7 +368,10 @@ section{
 }
 
 /*Containers dos imóveis*/
-
+.sp{
+    opacity: 0;
+    grid-area: sp;
+}
 .sp:hover{
     box-shadow: none;
 }
@@ -382,6 +384,7 @@ section div{
     width: 94%;
     height:95%;
     transition: box-shadow 0.3s;
+    background-color: #EBEDEF;
 }
 
 section div:hover{
@@ -440,12 +443,15 @@ section div a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem .";
 }
 .imovel1 img{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 5;   
+    grid-area: ibagem;  
 }
 
 
@@ -456,12 +462,15 @@ section div a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem .";
 }
 .imovel2 img{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 5;   
+    grid-area: ibagem; 
 }
 
 
@@ -472,12 +481,15 @@ section div a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem .";
 }
 .imovel3 img{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 5;   
+    grid-area: ibagem;   
 }
 
 
@@ -488,12 +500,16 @@ section div a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem .";
+    
 }
 .imovel4 img{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 5;   
+    grid-area: ibagem; 
 }
 
 
@@ -504,12 +520,15 @@ section div a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem .";
 }
 .imovel5 img{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 5;   
+    grid-area: ibagem; 
 }
 
 
@@ -520,12 +539,15 @@ section div a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem .";
 }
 .imovel6 img{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 5;   
+    grid-area: ibagem;
 }
 
 
@@ -536,12 +558,15 @@ section div a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem .";
 }
 .imovel7 img{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 5;   
+    grid-area: ibagem; 
 }
 
 
@@ -552,17 +577,40 @@ section div a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem ."
+    "ibagem .";
 }
 .imovel8 img{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 5;   
+    grid-area: ibagem;
 }
 
 
 .ultimo{
     grid-area: ultimo;
+    opacity: 0;
+}
+
+section .imovel1, .imovel2, .imovel3, .imovel4, .imovel5, .imovel6, .imovel7, .imovel8{
+    animation-name: blocos;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+@keyframes blocos{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        filter: grayscale(100%)
+    }
+    100%{
+        opacity: 1;
+        filter: grayscale(0%)
+    }
 }
 
 #imoveis{
@@ -577,6 +625,8 @@ section div a:hover{
     "ultimo ultimo";
     grid-gap: 10px;
     align-items: center;
+    border-left: 3px solid rgba(0, 0, 0, 0.5); 
+    border-right: 3px solid rgba(0, 0, 0, 0.5);
 }
 
 
@@ -588,7 +638,15 @@ section div a:hover{
         width: 100%;
         height: 65%;}
 }
-
+@media(min-width:1900px){
+    section{
+        border-radius: 25px 25px 0px 0px;
+        background-color: rgb(214,219,223);   
+    }
+    #imoveis{
+        border-top: 3px solid rgba(0, 0, 0, 0.5);
+    }
+}
 @media(max-width:800px){
     #imoveis{
         grid-template-columns: 1fr;
@@ -624,7 +682,7 @@ section div a:hover{
 
 @media(max-width:647px){
     section{
-        margin-top: 250px;
+        margin-top: 192px;
     }
 
     section div{
