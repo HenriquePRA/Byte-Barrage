@@ -12,49 +12,18 @@ body{
     }
 
 #formulario{
-    margin: 10vh auto 20vh auto;
-    width: 800px;
+    margin: 25vh auto 25vh auto;
+    width: 500px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 1fr 1fr 50px 1fr 1fr 1fr 50px 1fr 50px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    "frase frase"
-    "nome sobrenome"
-    "sexo estado"
-    "spc spc"
-    "entrada ."
-    "senha csenha"
-    "email confemail"
-    "spc2 spc2"
-    "msg msg"
-    "check check"
-    "botao botao";
-    height:975px;
+    "frase"
+    "entrada"
+    "senha"
+    "botao";
+    height:400px;
     background-color: #FFFF;
-}
-@media(max-width:425px){
-    #formulario{
-        height: 1200px;
-        grid-template-columns: auto;
-        grid-template-rows: 150px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5px 5px;
-        grid-template-areas:
-        "frase"
-        "nome"
-        "sobrenome"
-        "sexo"
-        "estado"
-        "entrada"
-        "senha "
-        "csenha"
-        "email "
-        "confemail"
-        "msg"
-        "check"
-        "botao"
-        "spc"
-        "spc2"
-        ;
-    }
 }
 .frase{
     grid-area: frase;
@@ -70,51 +39,15 @@ body{
     margin: 0 5%;
     grid-area: frm2;
 }
-.spc{
-    grid-area: spc;
-}
-.spc2{
-    grid-area: spc2;
-}
-#nome{
-    grid-area: nome;
-}
-#sobrenome{
-    grid-area: sobrenome;
-}
-#email{
-    grid-area: email
-}
-#confemail{
-    grid-area: confemail;
-}
 #logn{
     grid-area: entrada;
 }
 #senha{
     grid-area: senha;
 }
-#csenha{
-    grid-area: csenha;
-}
-#sexo{
-    grid-area: sexo;
-}
-#estado{
-    grid-area: estado;
-}
-#msg{
-    grid-area: msg;
-    margin: 0 auto;
-}
-#check{
-    grid-area: check;
-    margin-left: 10%;
-    margin-top: 20px; 
-}
 #bot{
-    grid-area: botao;   
-    margin-left: 10%;
+    grid-area: botao;
+    margin-left: 5%;
 }
 @media(max-width:820px){
     #formulario{
@@ -127,13 +60,13 @@ body{
     }
 }
 .controle{
+    margin: 0 auto 35px auto;
     display: block;
     border-style: none none solid none;
     border-color: #ccc;
     border-width: 0 0 2px 0;
     height: 34px;
     width: 100%;
-    margin-bottom: 35px;
 }
 .controle_select{
     margin: 0 auto;
@@ -143,7 +76,6 @@ body{
 .controle_select:hover{
     background-color: #DCFF00;
 }
-
 .botao {
 	-moz-box-shadow:inset 0px -3px 7px 0px #29bbff;
 	-webkit-box-shadow:inset 0px -3px 7px 0px #29bbff;
@@ -183,8 +115,6 @@ body{
 	position:relative;
 	top:1px;
 }
-
-
 footer{
     position: static;
     bottom: 0;

@@ -269,6 +269,10 @@ select:hover{
     animation-name: fal;
     font-size: 20px;
 }
+.fal a{
+    text-decoration: none;
+    color: black;
+}
 .fal:hover{
     background: #DCFF00;
     transform: scale(1.2);
@@ -720,14 +724,14 @@ section .imovel1, .imovel2, .imovel3, .imovel4, .imovel5, .imovel6, .imovel7, .i
 /*----Footer----*/
 
 footer{
-    width: 100vw;
-    height: 100px;
+    width: 100%;
+    height: 60px;
     background-color: #ff5225;
     display: grid;
     text-align: center;
     align-items: end;
 }
 footer h4{    
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     color: white;
 }

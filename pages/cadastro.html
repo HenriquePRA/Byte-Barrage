@@ -17,8 +17,9 @@
                 <li><a href=""id="tipo1"><label>&#9776;</label> Menu</a>
                     <ul>
                         <li><a href="../index.html">Home</a></li>
-                        <li><a href="../pages/contato.html">Contato</a></li>
-                        <li><a href="">Entrar</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="cadastro.html">Cadastro</a></li>
+                        <li><a href="login.html">Entrar</a></li>
                     </ul>  
                 </li>
             </ul>
@@ -27,25 +28,74 @@
     </header>
     <div id="formulario">
         <h2 class="frase">Página de cadastro</h2>
-        <form class="frm1" id="nome">
+        <form class="frm1" id="nome" >
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" class="controle" class="bot">
+            <input type="text" name="nome" class="controle">
         </form>
         <form class="frm1" id="email"
             <label for="email">E-mail:</label>
-            <input type="email" name="email" class="controle" class="bot">
+            <input type="email" name="email" class="controle">
         </form>
         <form class="frm2" id="sobrenome">
             <label for="sobrenome">Sobrenome:</label>
             <input type="text" name="sobrenome" class="controle">
         </form>
         <form class="frm2" id="confemail">            
-            <label for="c-email">Confirmação do E-mail:</label>
-            <input type="email" name="c-email" class="controle" class="bot">
+            <label for="confemail">Confirmação do E-mail:</label>
+            <input type="email" name="confemail" class="controle">
         </form>
-    </div>
+        <div class="spc"></div>
+        <form class="frm1" id="logn">
+            <label for="login">Login</label>
+            <input type="text" name="login" class="controle">
+        </form>
+        <form class="frm1" id="senha">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" class="controle">
+        </form>
+        <form class="frm1" id="csenha">
+            <label for="csenha">Confirme a senha:</label>
+            <input type="password" name="csenha" class="controle">
+        </form>
+        <form class="frm1" id="sexo">
+            Sexo:<br><br>
+            <input type="radio" name="sexo"/> Masculino<br/>
+            <input type="radio" name="sexo"/> Feminino<br/>
+            <input type="radio" name="sexo"/> Não desejo informar<br/>
+        </form>
+        <form class="frm2" id="estado">
+            <select class="controle_select">
+                <option>Acre (AC)</option>              <option>Paraíba (PB)</option>
+                <option>Alagoas (AL)</option>           <option>Paraná (PR)</option>
+                <option>Amapá (AP)</option>             <option>Pernambuco (PE)</option>
+                <option>Amazonas (AM)</option>          <option>Piauí (PI)</option>
+                <option>Bahia (BA)</option>             <option>Rio de Janeiro (RJ)</option>
+                <option>Ceará (CE)</option>             <option>Rio Grande do Norte (RN)</option>
+                <option>Distrito Federal (DF)</option>       <option>Rio Grande do Sul (RS)</option>
+                <option>Espírito Santo (ES)</option>         <option>Rondônia (RO)</option>
+                <option>Goiás (GO)</option>                  <option>Roraima (RR)</option>
+                <option>Maranhão (MA)</option>               <option>Santa Catarina (SC)</option>
+                <option>Mato Grosso (MT)</option>            <option>São Paulo (SP)</option>
+                <option>Mato Grosso do Sul (MS)</option>     <option>Sergipe (SE)</option>
+                <option>Minas Gerais (MG)</option>      <option>Tocantins (TO)</option>
+                <option>Pará (PA)</option>           
+            </select>
+        </form>
+        <div class="spc2"></div>
+        <form id="msg">
+            <label for="msg">Mensagem de Perfil:</label><br>
+            <textarea name="msg" rows="4" cols="35"></textarea>
+        </form>
+        <form id="check">
+            <input type="checkbox" name="aceitarc" value="ok" >
+            <label for="aceitarc">li e aceito os <a href="#">termos de uso.</a></label>
+        </form>
+        <form id="bot">
+            <a href="login.html" class="botao">Cadastrar-se</a>
+        </form>           
+</div>
     <footer>
         <h4>&copy; copyright 2018 - Oliveira Imóveis</h3>
-    </footer>
+    </footer>  
 </body>
 </html>
