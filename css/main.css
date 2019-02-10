@@ -61,7 +61,7 @@ body{
     margin: 0 auto;
 }
 .menu_principal{
-    width:100vw;
+    width:100%;
     background-color: #ff5225;
     display: grid;
     grid-template-columns: 150px 1fr 150px;
@@ -366,7 +366,7 @@ section{
 
 @media(max-width:800px){
     section{
-    width: 100vw;
+    width: 100%;
     height: auto;
     }
 }

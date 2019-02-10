@@ -18,14 +18,17 @@ body{
 
 section{
     margin: 30px auto;
+    height: auto;
     width: 95%;
     border-radius: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 2fr 1fr 0.5fr;
     grid-template-areas:
     "pt1 pos"
-    "pt2 pt2";
+    "pt2 pt2"
+    "form form"
+    ;
     background-color: rgba(214,219,223,0.7);
 }
 
@@ -48,8 +51,101 @@ section{
         grid-template-areas: 
         "pt1"
         "pos"
-        "pt2";
+        "pt2"
+        "form"
+        ;
     }
+}
+#form{
+    display: grid;
+    grid-area: form;
+    background-color: rgba(166,166,237,0.5) ;
+    width: 320px;
+    margin: 0 auto 5% auto;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header"
+    "nome email"
+    "mensagem mensagem"
+    "botao botao";
+    border-style: solid;
+    border-color: rgb(92, 92, 92);
+    border-width: 4px;
+}
+.header{
+    text-align: center;
+    grid-area: header;
+    height: 60px;
+    margin-top: 20px;
+}
+.nome{
+    grid-area: nome;
+    width: auto;
+    margin-left: 10px;
+}
+.nome input{
+    width: 135px;
+    border-style: none none solid none;
+    border-color: #ccc;
+    border-width: 0 0 2px 0;
+}
+.email{
+    grid-area: email;
+    margin-left: 10px;
+}
+.email input{
+    width: 135px;
+    border-style: none none solid none;
+    border-color: #ccc;
+    border-width: 0 0 2px 0;
+}
+.mensagem{
+    grid-area: mensagem;
+    padding: 10px;
+}
+.bot{
+    grid-area: botao;
+}
+.botao {
+	-moz-box-shadow:inset 0px -3px 7px 0px #29bbff;
+	-webkit-box-shadow:inset 0px -3px 7px 0px #29bbff;
+	box-shadow:inset 0px -3px 7px 0px #29bbff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dabf9), color-stop(1, #0688fa));
+	background:-moz-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:-webkit-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:-o-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:-ms-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#0688fa',GradientType=0);
+	background-color:#2dabf9;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+.botao:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
+	background:-moz-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:-webkit-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:-o-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:-ms-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0688fa', endColorstr='#2dabf9',GradientType=0);
+	background-color:#0688fa;
+}
+.botao:active {
+	position:relative;
+	top:1px;
 }
 #pos{
     grid-area: pos;
