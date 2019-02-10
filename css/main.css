@@ -632,6 +632,12 @@ section .imovel1, .imovel2, .imovel3, .imovel4, .imovel5, .imovel6, .imovel7, .i
     border-left: 3px solid rgba(0, 0, 0, 0.5); 
     border-right: 3px solid rgba(0, 0, 0, 0.5);
 }
+@media(max-width:800px){
+    #imoveis{
+        border-left: none; 
+        border-right: none;
+    }
+}
 
 
 /*Aplicação de responsividade nos containers dos imoveis*/
