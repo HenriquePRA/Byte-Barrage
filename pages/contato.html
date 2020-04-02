@@ -3,102 +3,110 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Oliveira Imóveis</title>
+    <title>Byte Barrage - Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/contato.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="shortcut icon" href="../img/favicon-36x36.png"/>
+    <link rel="shortcut icon" href="../img/house_svg.svg"/>
 </head>
 <body>
     <header>
-        <div class="menu_principal">        
-            <ul>
-                <li><a href=""><label>&#9776;</label><span class="menu"> Menu</span></a>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                        <li><a href="cadastro.html">Cadastro</a></li>
-                        <li><a href="login.html">Entrar</a></li>
-                    </ul>  
-                </li>
-            </ul>
-            <a id="home"href="../index.html"><img class="himg" src="../img/header_600px.jpg"></a>
+        <div id="headerbar">            
+            <div id="headerarea">
+                <div id="logo"><img src="../img/house_svg.svg"><h2>Byte Barrage</h2></img></div>
+                <div id="headerlinks">
+                    <div class="headerlink"><a href="../index.html"><div>Home</div></a></div>
+                    <div class="headerlink"><a href="contato.html"><div>Contato</div></a></div>
+                    <div class="headerlink"><a href="cadastro.html"><div>Cadastro</div></a></div>
+                    <div class="headerlink"><a href="login.html"><div>Entrar</div></a></div>
+                </div>
+            </div>
         </div>
     </header>
     <section>
-        <div id="pt1">
-            <h1>Contato com um vendedor</h1>
-
-            <i class="fas fa-phone"></i><span>Telefone</span> 
-
-                <p><strong>Oi: </strong>(83) 91111-1111</p><br>
-                <p><strong>Claro: </strong>(83) 92222-2222</p><br>
-                <p><strong>Vivo: </strong>(83) 93333-3333</p><br>
-                <p><strong>Tim: </strong>(83) 94444-4444</p><br><br>
-                <hr>           
-                
-            <i class="fab fa-whatsapp"></i><span>Whatsapp</span>
-
-                <p> (83) 91111-1111</p><br>
-                <p> (83) 98888-8888</p><br><br>
-                <hr>
-
-            <i class="fas fa-at"></i><span>E-mail</span>
-
-                <p><strong>Administrativo: </strong>Admin@oliveiraimoveis.com.br</p><br>
-                <p><strong>Suporte:  </strong>Suporte@oliveiraimoveis.com.br</p><br>
-                <p><strong>Desenvolvedor: </strong>henrique.poggi@homail.com</p><br><br>
-                <hr>
+        <div class="mainblock">
+            <div id="leftside">
+                <div id="numberblock">
+                    <div id="phone">
+                        <h3> <i class="fas fa-phone"></i><span>Telefone</span></h3>
+                        <ul>
+                            <li>(83) 91111-1111</li>
+                            <li>(83) 93333-3333 </li> 
+                            <li>(83) 94444-4444</li>
+                        </ul>
+                    </div>
+                    <div id="zap">
+                        <h3><i class="fab fa-whatsapp"></i><span>Whatsapp</span></h3>
+                        <ul>
+                            <li>(83) 91111-1111</li>
+                            <li>(83) 93333-3333 </li> 
+                            <li>(83) 94444-4444</li>
+                        </ul>
+                    </div>
+                    <div id="email">
+                        <h3><i class="fas fa-envelope"></i><span>Email</span></h3>
+                        <ul>
+                            <li>email1@bytefortress.com</li>
+                            <li>email2@bytefortress.com</li> 
+                            <li>email3@bytefortress.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="rightside">
+                <div id="local">
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!4v1548387748832!6m8!1m7!1s1Gy1-e_GxXOVH02HJaD73A!2m2!1d-7.134554784386721!2d-34.87337978805518!3f173.36618954272163!4f-2.052139445929697!5f0.7820865974627469"
+                    frameborder="0"
+                    style="border:0" 
+                    allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div id="bottonside">
+                <div id="bottonheader">
+                    <h3>Siganos nas redes sociais !</h3>
+                </div>
+                <div id="socialmedia">
+                    <div class="social">
+                        <img src="../img/facebook.svg">
+                        <h4>Facebook</h4>
+                    </div>
+                    <div class="social">
+                        <img src="../img/instagram.svg">
+                        <h4>Instagram</h4>
+                    </div>
+                    <div class="social">
+                        <img src="../img/linkedin.svg">
+                        <h4>Linkedin</h4>
+                    </div>
+                </div>
+                <div id="formcontainer">
+                    <form>
+                        <h2 class="header" >Deixe uma Mensagem</h2>
+                        <div class="nome">
+                            <label for="nome">Nome<br></label>
+                            <input type="text" name="nome" class="controle">
+                        </div>
+                        <div class="email">
+                            <label for="email">E-mail<br></label>
+                            <input type="email" name="email" class="controle">
+                        </div>
+                       <div class="mensagem">
+                            <label for="msg">Mensagem<br></label>
+                            <textarea name="msg" rows="6" cols="40"></textarea>
+                        </div>
+                        <div class="bot">
+                            <a href="login.html" class="botao"><div id="botcontainer">enviar</div></a>
+                        </div>  
+                    </form>
+                </div>
+            </div>
         </div>
-        <div id="pos">
-                <iframe 
-                src="https://www.google.com/maps/embed?pb=!4v1548387748832!6m8!1m7!1s1Gy1-e_GxXOVH02HJaD73A!2m2!1d-7.134554784386721!2d-34.87337978805518!3f173.36618954272163!4f-2.052139445929697!5f0.7820865974627469"
-                frameborder="0"
-                style="border:0" 
-                allowfullscreen>
-              </iframe>
-        </div>
-        <div id="pt2">
-            <div id="msg">
-               <h1>Siganos nas redes sociais</h1>
-            </div> 
-            <div id="face">
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-            </div>
-            <div id="inst">
-                <a href="#" ><i class="fab fa-instagram"></i></a>
-            </div>
-            <div id="link">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>           
-            <div id="twtt">
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
-            </div>
-            
-        </div>
-        <form id="form">
-            <h2 class="header" >Deixe uma Mensagem</h2>
-            <div class="nome">
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" class="controle">
-            </div>
-            <div class="email">
-                <label for="email">E-mail:<br></label>
-                <input type="email" name="email" class="controle">
-            </div>
-           <div class="mensagem">
-                <label for="msg">Mensagem:<br></label>
-                <textarea name="msg" rows="4" cols="40"></textarea>
-            </div>
-            <div class="bot">
-                    <a href="login.html" class="botao">enviar</a>
-            </div>  
-        </form>
-        </section>
     </section>
     <footer>
-        <h4>&copy; copyright 2018 - Oliveira Imóveis</h3>
+        <span>&copy; Copyright 2018 - Byte Barrage</span>
     </footer>
 </body>
 </html>

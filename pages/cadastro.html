@@ -3,100 +3,78 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Oliveira Imóveis</title>
+    <title>Byte Barrage - Cadastro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/cadastro.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="shortcut icon" href="../img/favicon-36x36.png"/>
+    <link rel="shortcut icon" href="../img/house_svg.svg"/>
 </head>
 <body>
     <header>
-        <div class="menu_principal">        
-            <ul>
-                <li><a href=""id="tipo1"><label>&#9776;</label> Menu</a>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                        <li><a href="cadastro.html">Cadastro</a></li>
-                        <li><a href="login.html">Entrar</a></li>
-                    </ul>  
-                </li>
-            </ul>
-            <a id="home"href="../index.html"><img class="himg" src="../img/header_600px.jpg"></a>
+        <div id="headerbar">            
+            <div id="headerarea">
+                <div id="logo"><img src="../img/house_svg.svg"><h2>Byte Barrage</h2></img></div>
+                <div id="headerlinks">
+                    <div class="headerlink"><a href="../index.html"><div>Home</div></a></div>
+                    <div class="headerlink"><a href="contato.html"><div>Contato</div></a></div>
+                    <div class="headerlink"><a href="cadastro.html"><div>Cadastro</div></a></div>
+                    <div class="headerlink"><a href="login.html"><div>Entrar</div></a></div>
+                </div>
+            </div>
         </div>
     </header>
     <div id="formulario">
         <h2 class="frase">Página de cadastro</h2>
-        <form class="frm1" id="nome" >
+        <div class="frm1" id="nome" >
             <label for="nome">Nome:</label>
             <input type="text" name="nome" class="controle">
-        </form>
-        <form class="frm1" id="email"
+        </div>
+        <div class="frm2" id="email">
             <label for="email">E-mail:</label>
             <input type="email" name="email" class="controle">
-        </form>
-        <form class="frm2" id="sobrenome">
+        </div>
+        <div class="frm2" id="sobrenome">
             <label for="sobrenome">Sobrenome:</label>
             <input type="text" name="sobrenome" class="controle">
-        </form>
-        <form class="frm2" id="confemail">            
+        </div>
+        <div class="frm2" id="confemail">            
             <label for="confemail">Confirmação do E-mail:</label>
             <input type="email" name="confemail" class="controle">
-        </form>
-        <div class="spc"></div>
-        <form class="frm1" id="logn">
+        </div>
+        <div class="frm1" id="logn">
             <label for="login">Login</label>
             <input type="text" name="login" class="controle">
-        </form>
-        <form class="frm1" id="senha">
+        </div>
+        <div class="frm1" id="senha">
             <label for="senha">Senha</label>
             <input type="password" name="senha" class="controle">
-        </form>
-        <form class="frm1" id="csenha">
+        </div>
+        <div class="frm1" id="csenha">
             <label for="csenha">Confirme a senha:</label>
             <input type="password" name="csenha" class="controle">
-        </form>
-        <form class="frm1" id="sexo">
+        </div>
+        <div class="frm2" id="sexo">
             Sexo:<br><br>
             <input type="radio" name="sexo"/> Masculino<br/>
             <input type="radio" name="sexo"/> Feminino<br/>
             <input type="radio" name="sexo"/> Não desejo informar<br/>
-        </form>
-        <form class="frm2" id="estado">
-            <select class="controle_select">
-                <option>Acre (AC)</option>              <option>Paraíba (PB)</option>
-                <option>Alagoas (AL)</option>           <option>Paraná (PR)</option>
-                <option>Amapá (AP)</option>             <option>Pernambuco (PE)</option>
-                <option>Amazonas (AM)</option>          <option>Piauí (PI)</option>
-                <option>Bahia (BA)</option>             <option>Rio de Janeiro (RJ)</option>
-                <option>Ceará (CE)</option>             <option>Rio Grande do Norte (RN)</option>
-                <option>Distrito Federal (DF)</option>       <option>Rio Grande do Sul (RS)</option>
-                <option>Espírito Santo (ES)</option>         <option>Rondônia (RO)</option>
-                <option>Goiás (GO)</option>                  <option>Roraima (RR)</option>
-                <option>Maranhão (MA)</option>               <option>Santa Catarina (SC)</option>
-                <option>Mato Grosso (MT)</option>            <option>São Paulo (SP)</option>
-                <option>Mato Grosso do Sul (MS)</option>     <option>Sergipe (SE)</option>
-                <option>Minas Gerais (MG)</option>      <option>Tocantins (TO)</option>
-                <option>Pará (PA)</option>           
-            </select>
-        </form>
-        <div class="spc2"></div>
-        <form id="msg">
+        </div>
+        <div id="msg">
             <label for="msg">Mensagem de Perfil:</label><br>
-            <textarea name="msg" rows="4" cols="35"></textarea>
-        </form>
-        <form id="check">
+            <textarea name="msg" rows="6" cols="50"></textarea>
+        </div>
+        <div id="check">
             <input type="checkbox" name="aceitarc" value="ok" >
             <label for="aceitarc">li e aceito os <a href="#">termos de uso.</a></label>
-        </form>
-        <form id="bot">
-            <a href="login.html" class="botao">Cadastrar-se</a>
-        </form>           
+        </div>
+        <div id="bot">
+            <a href="login.html" class="botao"><div>Cadastrar-se</div></a>
+        </div>           
 </div>
     <footer>
-        <h4>&copy; copyright 2018 - Oliveira Imóveis</h3>
-    </footer>  
+        <span>&copy; Copyright 2018 - Byte Barrage</span>
+    </footer> 
 </body>
 </html>

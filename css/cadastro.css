@@ -1,81 +1,57 @@
 *{
     margin:0;
     padding:0;
-
 }
+
 body{
-    background-image: url(../img/pexels-photo-531853.jpeg);
-    background-color: rgb(0, 238, 255,0.2);
+    background: url(../img/background.jpg ) no-repeat top center #2D4059;
     background-blend-mode: screen;
     background-size: cover;
-    font-family: 'Raleway', sans-serif;
-    }
+    color: #daeaf6;
+}
+
+body a{
+    text-decoration: none;
+    color: #daeaf6;
+}
 
 #formulario{
+    border-radius: 5px;
     margin: 10vh auto 20vh auto;
-    width: 800px;
+    width: 1000px;
+    background: linear-gradient(to bottom, rgba(5, 117, 230, 0.7), #2D4059);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 1fr 1fr 50px 1fr 1fr 1fr 50px 1fr 50px 1fr;
+    grid-template-rows: 70px 1fr 1fr 1fr 1fr 1fr 50px 70px;
     grid-template-areas:
     "frase frase"
     "nome sobrenome"
-    "sexo estado"
-    "spc spc"
-    "entrada ."
-    "senha csenha"
-    "email confemail"
-    "spc2 spc2"
+    "entrada sexo"
+    "senha email"
+    "csenha confemail"
     "msg msg"
     "check check"
     "botao botao";
     height:975px;
-    background-color: #FFFF;
 }
-@media(max-width:425px){
-    #formulario{
-        height: 1200px;
-        grid-template-columns: auto;
-        grid-template-rows: 150px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5px 5px;
-        grid-template-areas:
-        "frase"
-        "nome"
-        "sobrenome"
-        "sexo"
-        "estado"
-        "entrada"
-        "senha "
-        "csenha"
-        "email "
-        "confemail"
-        "msg"
-        "check"
-        "botao"
-        "spc"
-        "spc2"
-        ;
-    }
+
+input, textarea {
+    padding: 3px;
 }
+
 .frase{
     grid-area: frase;
-    color: black;
     text-align: center;
-    padding: 30px 0px;
+    align-self: end;
+    background-color: #2D4059;
+    padding: 10px 0;
 }
-.frm1{
-    margin: 0 5%;
+.frm1, .frm2{
+    align-self: center;
+    margin: auto 40px;
     grid-area: frm1;
 }
-.frm2{
-    margin: 0 5%;
-    grid-area: frm2;
-}
-.spc{
-    grid-area: spc;
-}
-.spc2{
-    grid-area: spc2;
-}
+
 #nome{
     grid-area: nome;
 }
@@ -99,96 +75,112 @@ body{
 }
 #sexo{
     grid-area: sexo;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #2D4059;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-#estado{
-    grid-area: estado;
-}
+
 #msg{
     grid-area: msg;
-    margin: 0 auto;
+    align-self: center;
+    justify-self: center;
 }
+
+#msg textarea {
+    margin-top: 10px;
+    border: 1px solid #daeaf6;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
 #check{
     grid-area: check;
-    margin-left: 10%;
-    margin-top: 20px; 
+    align-self: center;
+    margin-left: 40px;
 }
 #bot{
-    grid-area: botao;   
-    margin-left: 10%;
+    display: flex;
+    grid-area: botao;
+    margin-left: 40px;
 }
-@media(max-width:820px){
-    #formulario{
-        width: 500px;
-    }    
+
+#bot div {
+    border-radius: 5px;
+    padding: 15px;
+    background-color:#ff008e;
+    margin-bottom: 20px;
 }
-@media(max-width:600px){
-    #formulario{
-        width: 90%;
-    }
-}
+
 .controle{
     display: block;
-    border-style: none none solid none;
-    border-color: #ccc;
-    border-width: 0 0 2px 0;
-    height: 34px;
+    border: 1px solid #daeaf6;
+    border-radius: 5px;
+    height: 30px;
     width: 100%;
-    margin-bottom: 35px;
+    margin-top: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-.controle_select{
-    margin: 0 auto;
-    width: 60%;
-    border-style: none solid none solid;
-}
-.controle_select:hover{
-    background-color: #DCFF00;
-}
-
-.botao {
-	-moz-box-shadow:inset 0px -3px 7px 0px #29bbff;
-	-webkit-box-shadow:inset 0px -3px 7px 0px #29bbff;
-	box-shadow:inset 0px -3px 7px 0px #29bbff;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dabf9), color-stop(1, #0688fa));
-	background:-moz-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
-	background:-webkit-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
-	background:-o-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
-	background:-ms-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
-	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#0688fa',GradientType=0);
-	background-color:#2dabf9;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:1px solid #0b0e07;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	padding:9px 23px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #263666;
-}
-.botao:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
-	background:-moz-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
-	background:-webkit-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
-	background:-o-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
-	background:-ms-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
-	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0688fa', endColorstr='#2dabf9',GradientType=0);
-	background-color:#0688fa;
-}
-.botao:active {
-	position:relative;
-	top:1px;
+@media (max-width: 1005px) {
+    #formulario {
+        width: 100%;
+        border-radius: 0;    
+    }
 }
 
+@media screen and (max-width: 800px) {
+    .frm1, .frm2, #bot, #msg label{
+        margin: auto 20px;
+    }
+}
 
-footer{
-    position: static;
-    bottom: 0;
+@media screen and (max-width: 500px) {
+    .frm1, .frm2, #check{
+        margin: auto 10px;
+    }
+
+    .controle {
+        width: 98%;
+    }
 }
-footer h4{
-    padding: 10px 0;
+
+@media(max-width:425px){
+    #formulario{
+        grid-template-columns: auto;
+        grid-template-rows: 70px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 50px 70px;
+        grid-template-areas:
+        "frase"
+        "nome"
+        "sobrenome"
+        "sexo"
+        "entrada"
+        "senha "
+        "csenha"
+        "email "
+        "confemail"
+        "msg"
+        "check"
+        "botao";
+        height: 1200px;
+    }
+
+    #sexo {
+        margin: 20px;
+    }
+
+    #msg, .frm1, .frm2 {
+        margin-top: 20px;
+    }
+
+    #msg textarea {
+        width: 90%;
+        margin: 10px 10px;
+    }
 }
+
+
+
+
+
+
+

@@ -1,124 +1,95 @@
-*{
-    margin:0;
-    padding:0;
-
-}
 body{
-    background-image: url(../img/pexels-photo-531853.jpeg);
+    background-image: url(../img/background.jpg);
     background-color: rgb(0, 238, 255,0.2);
-    background-blend-mode: screen;
-    background-size: cover;
-    font-family: 'Raleway', sans-serif;
-    }
+}
 
-#formulario{
-    margin: 25vh auto 25vh auto;
-    width: 500px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 150px 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "frase"
-    "entrada"
-    "senha"
-    "botao";
-    height:400px;
-    background-color: #FFFF;
+body, body a {
+    text-decoration: none;
+    color: #daeaf6;
 }
-.frase{
-    grid-area: frase;
-    color: black;
-    text-align: center;
-    padding: 30px 0px;
+
+#mainblock {
+    height: 90vh;
+    display: flex;
 }
-.frm1{
-    margin: 0 5%;
-    grid-area: frm1;
+
+#formcontainer {
+    display: flex;
+    margin: auto;
+   
 }
-.frm2{
-    margin: 0 5%;
-    grid-area: frm2;
+
+#formcontainer form{
+    margin: 50px auto;
+    background: #124e96;
+    color: #daeaf6;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    height: 250px;
 }
-#logn{
-    grid-area: entrada;
-}
-#senha{
-    grid-area: senha;
-}
-#bot{
-    grid-area: botao;
-    margin-left: 5%;
-}
-@media(max-width:820px){
-    #formulario{
-        width: 500px;
-    }    
-}
-@media(max-width:600px){
-    #formulario{
-        width: 90%;
+
+@media screen and (max-width: 375px) {
+    #formcontainer form{
+        width: 100%;
+        border-radius: 0;
     }
 }
-.controle{
-    margin: 0 auto 35px auto;
-    display: block;
-    border-style: none none solid none;
-    border-color: #ccc;
-    border-width: 0 0 2px 0;
-    height: 34px;
-    width: 100%;
+
+#formcontainer form input, textarea {
+    margin-top: 5px;
+    background-color: #daeaf6;
+    border: 1px solid #daeaf6;
+    padding: 3px 5px;
+    border-radius: 5px;
+    color: #05172d;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-.controle_select{
-    margin: 0 auto;
-    width: 60%;
-    border-style: none solid none solid;
+
+#formcontainer form input {
+    width: 96%;
+    height: 25px;
 }
-.controle_select:hover{
-    background-color: #DCFF00;
+
+#formcontainer form textarea {
+    padding: 3px 5px;
 }
-.botao {
-	-moz-box-shadow:inset 0px -3px 7px 0px #29bbff;
-	-webkit-box-shadow:inset 0px -3px 7px 0px #29bbff;
-	box-shadow:inset 0px -3px 7px 0px #29bbff;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dabf9), color-stop(1, #0688fa));
-	background:-moz-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
-	background:-webkit-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
-	background:-o-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
-	background:-ms-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
-	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#0688fa',GradientType=0);
-	background-color:#2dabf9;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:1px solid #0b0e07;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	padding:9px 23px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #263666;
+
+#formcontainer form .header {
+    margin: 0 auto 20px auto;
 }
-.botao:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
-	background:-moz-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
-	background:-webkit-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
-	background:-o-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
-	background:-ms-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
-	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0688fa', endColorstr='#2dabf9',GradientType=0);
-	background-color:#0688fa;
+
+#formcontainer form .nome, .passworld, .mensagem {
+    margin: 10px 0;
 }
-.botao:active {
-	position:relative;
-	top:1px;
+
+#formcontainer form .bot {
+    display: flex;
 }
+
+#formcontainer .bot a {
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#formcontainer form #botcontainer {
+    display: flex;
+    background-color: #ff008e;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.email, .passworld {
+    margin-bottom: 20px;
+}
+
+.bot {
+    margin-top: 30px;
+}
+
+
 footer{
-    position: static;
+    position: fixed;
     bottom: 0;
-}
-footer h4{
-    padding: 10px 0;
 }

@@ -1,17 +1,29 @@
 /* ----Definição e organização do background---- */
 
-
 *{
     margin:0;
     padding:0;
 }
+
+
+@font-face {
+    font-family: DancingScript;
+    src:  local('DancingScript'), url(../font/DancingScript-Regular.ttf);      
+}
+
+@font-face {
+    font-family: RobotoCondensed;
+    src:  local('RobotoCondensed'), url(../font/RobotoCondensed-Regular.ttf);      
+}
+
 body{
-    font-family: 'Open Sans', sans-serif;
-    background: url(../img/logo_12002.jpg) no-repeat top center fixed,linear-gradient(135deg, #e66465, #9198e5);
+    font-family: RobotoCondensed;
+    background: url(../img/background.jpg ) no-repeat top center #2D4059;
     background-attachment: scroll;
     animation-name: branco;
     animation-duration: 2s;
 }
+
 
 @keyframes branco{
     0%{
@@ -21,225 +33,177 @@ body{
         opacity: 1;
     }
 }
-/*----aplicação da responsividade no background----*/
-
-
-@media(max-width:647px){
-    body{
-        background: url(../img/logo_100-599px.jpg) no-repeat top center fixed,linear-gradient(135deg, #e66465, #9198e5);
-        background-attachment: scroll;      
-    } 
-}
-@media(min-width:1900px){
-    body{
-        background-size: 100vw auto;
-    }
-}
-
-/* ----Definição da fonte usada---- */
-
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(../font/Open-Sans.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/OpenSans-Bold.ttf) format('truetype');
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-}
 
 /*---- Criação do menu superior ----*/
 
-.himg{
-    margin: 0 auto;
-}
-.menu_principal{
+#headerbar{
+    display: flex;
     width:100%;
-    background-color: #ff5225;
+    background-color: #124e96;
+}
+
+#headerarea{
     display: grid;
-    grid-template-columns: 150px 1fr 150px;
-    grid-template-rows: 50px;
+    grid-template-columns: 1fr 330px;
+    grid-template-rows: auto;
+    flex-direction: row;
+    margin: auto;
+    width: 1000px;
 }
-.menu_principal ul{
-    list-style: none;
-    position: relative;
-    justify-content: flex-start;
+
+#logo {
+    grid-column: 1 / 2;
+    width: 200px;
+    display: flex;
 }
-.menu_principal ul li{
-    width: 150px;
-    float: left;
+
+#logo img {
+    margin: auto 0 auto 10px;
+    height: 30px;
 }
-.menu_principal #home{
-    padding: 0px;
+
+#logo h2 {
+    color: #daeaf6;
+    font-family: DancingScript;
+    margin: auto auto auto 10px;
 }
-.menu_principal #home:hover{
-    background-color: #ff5225;
+
+#headerlinks{
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 2 / 3;
 }
-.menu_principal a{
-    padding: 10px;
-    height: 100%;
-    display: block;
+
+.headerlink {
+    margin: auto 1px;
+    height: 40px;
+    display: flex;
+    background-color: #09274b;
+    transition: all 0.5s;
+}
+
+.headerlink:hover {
+    background-color: #ff008e;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 75%);
+}
+
+.headerlink a {
+    display: flex;
+    color: #FFFFFF;
     text-decoration: none;
+}
+
+.headerlink a div{
     text-align: center;
-    color: white;
-    transition: background 0.5s;
-}
-#tipo1{
-    margin: 1px 0 3px 0;
+    width: 100px;
+    margin: auto;
 }
 
-.menu_principal a:hover{
-    background-color: rgb(255,82,37);
-    color: #7f2912;
-    font-weight: 700;
-}
-.menu_principal #tipo1:hover{
-    background-color: whitesmoke;
-    color: #331007;
-}
-.menu_principal ul ul{
-    position: absolute;
-    visibility: hidden;
-}
-.menu_principal ul li:hover ul{
-    visibility: visible;
-}
-@media(max-width:800px){
-    .menu_principal ul li:hover ul{
-        visibility: initial;
-    } 
-    .menu_principal ul li:active ul{
-        visibility: visible;
-    }
-}
-.menu_principal ul ul li{
-    float: none;
-    border-bottom: 2px solid transparent;
-}
-.menu_principal ul ul li:last-child a{
-    background-color: #6BB30A;
-}
-.menu_principal ul ul li:last-child a:hover{
-    background-color: #DCFF00;
-    color: #331007;
-}
-.menu_principal ul ul li a{
-    background-color: rgba(255,82,37,0.55);
-}
-.menu_principal ul li a label{
-    font-size: 20px;
-    font-weight: 900;
-    text-align: left;
-}
-/*Aplicação da responsividade no menu superior*/
-
-
-@media(max-width:647px){
-    .menu_principal ul li{
-        width: 100%;
-        float: none;
-    }
-
-    .menu_principal ul ul{
-        position: static;
-        overflow: hidden;
-        max-height: 0;
-        transition: all .4s;
-    }
-
-    .menu_principal ul li:hover ul{
-        height: auto;
-        max-height: 200px;
-    }
-
-    .himg{
+@media screen and (max-width: 600px) {
+    #logo {
         display: none;
     }
+
+    #headerlinks {
+        grid-column: 1 / 3;
+    }
 }
-@media(max-width:600px){
-    .menu{
-     visibility: hidden;
-     }
-     .menu_principal ul li a label{
-         font-size: 25px;
-     }
-     .menu_principal a{
-         padding-top: 5px;
-     }
- }
+
+@media (max-width: 900px) {
+    #headerbar{
+        justify-content: center;
+    }
+    .headerlink:last-child {
+        margin-right: 5px;
+    }
+
+    .headerlink a div{
+        width: 80px;
+    }
+}
 
 /*----criação da caixa de pesquisa flutuante ----*/
 
+#search_area{
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
 
 .caixa_maior{
+    margin: auto;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 70px;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 65px 1fr 2.3fr;
     grid-column-gap: 5px;
     grid-template-areas:
     "tetobox tetobox tetobox"
-    "opcoes1 opcoes2 fas"
-    "caixa_pesquisa caixa_pesquisa fas";
-    margin: 0 auto;
+    "opcoes1 opcoes2 search_btn"
+    "caixa_pesquisa caixa_pesquisa search_btn";
     width: 500px;
     height: 150px;
-    margin-top: 230px;
-    background-color: rgba(34, 34, 34, 0.75);
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(255, 133, 102, 0.5);
+    background-color: rgba(18,78,150, 0.75);
+    border-radius: 3px;
     
 }
 .caixa_pesquisa{
     grid-area: caixa_pesquisa;
+    margin-top: 10px;
 }
 .caixa_pesquisa input{
-    margin: 10px;
     padding: 2px;
-    border-radius: 2px;
-    width: 85%;
+    width: 357px;
 }
 
 .caixa_teto{
     grid-area: tetobox;
+    align-self: center;
     color: white;
+}
+.caixa_teto h2 {
+    font-family: DancingScript;
+    font-weight: normal;
+}
+
+.optionbox {
+    align-self: center;
+}
+
+#op1{
+    justify-self: end;
+    margin-right: 5px;
+}
+
+#op2{
+    justify-self: start;
+    margin-left: 5px;
 }
 .caixa_form{
     display: flex;
     grid-area: opcoes1;
-    background: url(img/down.png) no-repeat 96% 0;
-    height: 29px;
+    background: url(../img/down.png) no-repeat 95% 0;
+    align-self: center;
+    height: 30px;
     overflow: hidden;
     width: 175px;
     border-radius: 2px;
-    background-color: #ff8566;
-    color: white;
-    margin: 10% auto 0 13.5%;    
+    background-color: #ff008e;
+    color: #daeaf6;
+    font-weight: 600;
 }
 
-.caixa_teto h2{
-    margin: 0 auto;
-    display: block;
-    margin-top: 10px;
-}
 .caixa_form-2{
     display: flex;
     grid-area: opcoes2;
-    background: url(img/down.png) no-repeat 96% 0;
-    height: 29px;
+    background: url(../img/down.png) no-repeat 95% 0;
+    height: 30px;
     overflow: hidden;
     width: 175px;
     border-radius: 2px;
-    background-color: #ff8566;
-    color: white;
-    margin: 10% 13% 0 auto;    
+    background-color: #ff008e;
+    color: #daeaf6;
+    font-weight: 600;
 }
 
 select{
@@ -251,39 +215,25 @@ select{
     font-size: 14px;
     transition: background 0.5s;
  }
-select:hover{
-    background-color: #ff5225;
-    font-weight: 700;
-    color: black;
-}
-
 
 .caixa_maior .fal{
-    grid-area: fas;
+    display: flex;
+    grid-area: search_btn;
+    margin-top: 8px;
     background-color: white;
     border-radius: 2px;
-    height: 40px;
-    width: 40px;
-    margin: 30px 0;
-    transition: background 0.5s, transform 0.5s;
-    animation-name: fal;
+    height: 50px;
+    width: 50px;
     font-size: 20px;
 }
-.fal a{
-    text-decoration: none;
-    color: black;
+
+.fal a {
+    margin: auto;
 }
-.fal:hover{
-    background: #DCFF00;
-    transform: scale(1.2);
-}
-.fal:active{
-    background: #ff5225;
-}
+
 .fal .fas{
     text-decoration: none;
     color: black;
-    padding: 11px 0px;
 }
 .caixa_maior .fal span{
     visibility: hidden;
@@ -292,452 +242,158 @@ select:hover{
 /*----responsividade da caixa de pesquisa flutuante ----*/
 
 
-@media(max-width:647px){
+@media(max-width:600px){
     .caixa_maior{
         width: 300px;
         height: 190px;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 70px;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
         "tetobox tetobox"
         "opcoes1 opcoes2"
         "caixa_pesquisa caixa_pesquisa"
-        "fas fas";
+        "search_btn search_btn";
     }
-    .caixa_teto{
-       margin: 10px auto;
-    }   
+  
     .caixa_teto h2{
         font-size:20px;       
     }
     .caixa_form{
         width: 122px;
-        margin: 5% 0 auto 13%;
     }
     .caixa_form-2{
-        width: 122px;
-        margin: 5% 0 auto 5%;
+        width: 120px;
     }
-    .caixa_maior a i{
-       margin: 0 auto;
+    .caixa_pesquisa input{
+        width: 248px;
     }
     .caixa_maior .fal{
-        margin: 10px auto 0 auto;
         height: 30px;
-        width: auto;
         width: 120px;
-        padding: 0;
-    }
-    .caixa_maior .fal span{
-        font-size: 15px;
-        font-weight: 700;
-        text-decoration: none;
-        visibility: visible;
-    }
-    .fal .fas{
-        padding: 5px 0;
-    }
-    .fal a:-webkit-any-link{
-        text-decoration: none;
-        color: black;
+        justify-self: center;
+        align-self: start;
+        margin: 0;
     }
 }
 
 /*----Area de navegação com ofertas----*/
 
-
-/*--Container principal--*/
-
-section{
-    display: grid;
-    background-color: rgba(214,219,223,0.5);
+#imoveis {    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 1000px;
-    height: 1100px;
-    margin: 0 auto;
-    margin-top: 300px;
+    margin: 0 auto 110px auto ;
+    padding: 18px 0;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, rgba(218,234,246,0.9), #2D4059);
 }
 
-@media(max-width:1000px){
-    section{
-        width: 790px;
-        height: auto;
-    }    
-}
-
-@media(max-width:800px){
-    section{
-    width: 100%;
-    height: auto;
+@media(max-width: 1010px) {
+    #imoveis {
+        width: 100%;
+        border-radius: 0;
+        margin: 0 auto 110px auto ;
     }
 }
-
-/*Containers dos imóveis*/
-.sp{
-    opacity: 0;
-    grid-area: sp;
-}
-.sp:hover{
-    box-shadow: none;
-}
-
-.ultimo:hover{
-    box-shadow: none;
+.imovel {
+    width: 300px;
+    height: 400px;
+    background-color: #124e96;
+    display: grid;
+    grid-template-columns: 180px 120px;
+    grid-template-rows: 225px 40px 1fr 50px;
+    margin: 10px;
+    color: #daeaf6;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
-section div{
-    width: 94%;
-    height:95%;
-    transition: box-shadow 0.3s;
-    background-color: #EBEDEF;
+.imovel img {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
-section div:hover{
-    box-shadow: 1px 1px 5px #ff5225;
+.imovel .imovelheader {
+    align-self: center;
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color:#05172d;
+    color: #daeaf6;
+    display: flex;
 }
 
-@media(max-width:1000px){
-    section div{
-        height: 201px;
-    }
+.imovel .imovelheader h3 {
+    margin: auto 0 auto 20px;
 }
 
-section div img{
-    width: 232px;
-    height: 201.88px;     
+.imovel p {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    align-self: center;
+    margin: 0 20px;
 }
 
-section div h1{
-    padding: 10px;
-}
-
-section div h3{
-    padding-left: 10px;
+.imovel h2 {
+    margin-left: 20px;
+    align-self: center;
     font-weight: 500;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 
-section div a{
+.imovel h2 i {
+    color: #FFD700;
+}
+
+.imovel .imovellink {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 5;
-    padding: 17px;
-    background-color: #DCFF00;
-    font-weight: 700;
+    background-color: #09274b;
+    width: 120px;
+    height: 50px;
+    transition: all .3s;
+}
+
+.imovel .imovellink:hover {
+    clip-path: polygon(13% 1%, 100% 0, 100% 100%, 0 100%, 0% 38%);
+    background-color: #ff008e;
+}
+
+
+.imovel a {
+    display: flex;
     text-decoration: none;
-    text-align: end;
-    align-self: stretch;
-    color: black;
-    transition: background .3s;
-
+    color: #daeaf6;
+    width: 100%;
+    height: 100%;
 }
 
-section div a:visited{
-    color: black;
-}
-
-section div a:hover{
-    background-color: #ff5225;
-    color: white;
-}
-
-.imovel1{
-    grid-area: casa1;
-    justify-self: center;
-    box-shadow: 1px 1px 5px  #888888;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem .";
-}
-.imovel1 img{
-    grid-area: ibagem;  
-}
-
-
-.imovel2{
-    grid-area: ap1;
-    justify-self: center;
-    box-shadow: 1px 1px 5px  #888888;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem .";
-}
-.imovel2 img{
-    grid-area: ibagem; 
-}
-
-
-.imovel3{
-    grid-area: casa2;
-    justify-self: center;
-    box-shadow: 1px 1px 5px  #888888;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem .";
-}
-.imovel3 img{
-    grid-area: ibagem;   
-}
-
-
-.imovel4{
-    grid-area: ap2;
-    justify-self: center;
-    box-shadow: 1px 1px 5px  #888888;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem .";
-    
-}
-.imovel4 img{
-    grid-area: ibagem; 
-}
-
-
-.imovel5{
-    grid-area: casa3;
-    justify-self: center;
-    box-shadow: 1px 1px 5px  #888888;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem .";
-}
-.imovel5 img{
-    grid-area: ibagem; 
-}
-
-
-.imovel6{
-    grid-area: ap3;
-    justify-self: center;
-    box-shadow: 1px 1px 5px  #888888;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem .";
-}
-.imovel6 img{
-    grid-area: ibagem;
-}
-
-
-.imovel7{
-    grid-area: casa4;
-    justify-self: center;
-    box-shadow: 1px 1px 5px  #888888;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem .";
-}
-.imovel7 img{
-    grid-area: ibagem; 
-}
-
-
-.imovel8{
-    grid-area: ap4;
-    justify-self: center;
-    box-shadow: 1px 1px 5px  #888888;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem ."
-    "ibagem .";
-}
-.imovel8 img{
-    grid-area: ibagem;
-}
-
-
-.ultimo{
-    grid-area: ultimo;
-    opacity: 0;
-}
-
-section .imovel1, .imovel2, .imovel3, .imovel4, .imovel5, .imovel6, .imovel7, .imovel8{
-    animation-name: blocos;
-    animation-delay: 0.5s;
-    animation-duration: 2s;
-    animation-fill-mode: both;
-}
-@keyframes blocos{
-    0%{
-        opacity: 0;
-    }
-    50%{
-        filter: grayscale(100%)
-    }
-    100%{
-        opacity: 1;
-        filter: grayscale(0%)
-    }
-}
-
-#imoveis{
-    grid-template-columns:1fr 1fr;
-    grid-template-rows: 100px auto auto auto auto 100px;
-    grid-template-areas:
-    "sp sp"
-    "casa1 ap1"
-    "casa2 ap2"
-    "casa3 ap3"
-    "casa4 ap4"
-    "ultimo ultimo";
-    grid-gap: 10px;
-    align-items: center;
-    border-left: 3px solid rgba(0, 0, 0, 0.5); 
-    border-right: 3px solid rgba(0, 0, 0, 0.5);
-}
-@media(max-width:800px){
-    #imoveis{
-        border-left: none; 
-        border-right: none;
-    }
-}
-
-
-/*Aplicação de responsividade nos containers dos imoveis*/
-
-
-@media(max-width:450px){
-    section div img{
-        width: 100%;
-        height: 65%;}
-}
-@media(min-width:1900px){
-    section{
-        border-radius: 25px 25px 0px 0px;
-        background-color: rgb(214,219,223);   
-    }
-    #imoveis{
-        border-top: 3px solid rgba(0, 0, 0, 0.5);
-    }
-}
-@media(max-width:800px){
-    #imoveis{
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px auto auto auto auto auto auto auto auto 100px;
-        grid-template-areas:
-        "sp"
-        "casa1"
-        "ap1"
-        "casa2"
-        "ap2"
-        "casa3"
-        "ap3"
-        "casa4"
-        "ap4"
-        "ultimo";}
-
-    section{
-        margin-top: 300px;
-    }
-
-    section div{
-        width: 600px;
-        height: auto;
-    }
-}
-
-@media(max-width:800px){
-   section div img{
-        width: 100%;
-        height: 226.813px;
-    }
-}
-
-@media(max-width:647px){
-    section{
-        margin-top: 192px;
-    }
-
-    section div{
-        width: 95%;
-    }    
-}
-
-@media(max-width:450px){
-    #imoveis{
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px auto auto auto auto auto 100px;
-        grid-template-areas:
-        "sp"
-        "casa1"
-        "ap1"
-        "casa2"
-        "ap2"
-        "casa3"
-        "ultimo";
-    }
-
-    .imovel6{
-        display: none;
-    }
-
-    .imovel7{
-        display: none;
-    }
-
-    .imovel8{
-        display: none;
-    }
+.imovel a div{
+    margin: auto;
 }
 
 /*----Footer----*/
 
 footer{
     width: 100%;
-    height: 60px;
-    background-color: #ff5225;
-    display: grid;
-    text-align: center;
-    align-items: end;
+    height: 45px;
+    background-color: #124e96;
+    display: flex;
+    bottom: 0;
 }
-footer h4{    
-    margin-bottom: 5px;
-    color: white;
+footer span{    
+    margin: auto;
+    color: #daeaf6;
+    font-size: 15px;
 }
