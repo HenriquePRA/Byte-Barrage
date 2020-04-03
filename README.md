@@ -20,7 +20,7 @@ cada página possúi sua folha de estilo própria e todas as páginas utilizam a
 
   ![](img/screenshots/flexbox_grid.JPG)
 
-* Possúi design responsivel desde dispositivos mobile com tela pequena até disposítivos em 4K.
+* Possui design responsivel desde dispositivos mobile com tela pequena até disposítivos em 4K.
 
   * Mobile
   
