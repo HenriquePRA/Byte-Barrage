@@ -10,25 +10,25 @@ cada página possúi sua folha de estilo própria e todas as páginas utilizam a
 
 * Faz utilização de seletores na estilização com CSS: ID, class, cascata e herança, pseudo-classes e pseudo-elementos.
 
-  ![](img/screenshots/seletores.JPG)
+  img1 aqui
   
 * Faz uso de animações e transitions e transform.
 
-  ![](img/screenshots/animacoes_transition_transform.JPG)
+  img2 aqui
 
 * Posicionamento de elementos utilizando conceito de layout em CSS: grid, flexbox,float, position.
 
-  ![](img/screenshots/flexbox_grid.JPG)
+  img3 aqui
 
 * Possui design responsivel desde dispositivos mobile com tela pequena até disposítivos em 4K.
 
   * Mobile
   
-  ![](img/screenshots/responsividade_mobile.JPG)
+  img4 aqui
   
   * 4K
   
-  ![](img/screenshots/responsividade_4k.JPG)
+  img5 aqui
   
 
 ## Requisitos Mínimos
