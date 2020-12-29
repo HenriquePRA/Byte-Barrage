@@ -22,7 +22,7 @@ nele é explorado um vasto grupo de funcionalidades da linguagem de marcação H
 <a name="Características"></a>
 ## Características :page_facing_up:
 
-* Possui 5 páginas, a página index , página de pesquisa, página de contato, página de cadastro, e página de login.
+* Possui 5 páginas, index , pesquisa, contato, cadastro e página de login.
 cada página possui sua folha de estilo própria e todas as páginas utilizam a folha de estilo main.
 
 * Faz utilização de seletores na estilização com CSS: ID, class, cascata e herança, pseudo-classes e pseudo-elementos.
@@ -61,4 +61,4 @@ Finalizado :v:
 ## Rodando o projeto :running: 
 
 1. Clone o repositório.
-2. Execução do arquivo index.html por um navegador de preferência.
+2. Execução do arquivo index.html por um navegador que suporte os requisitos mínimos.
