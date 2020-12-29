@@ -1,37 +1,64 @@
-# Byte Barrage
+# :books: Byte Barrage :books:
 
-Este é o repositório do projeto final de da disciplina Linguagem de Marcação, fiz esse projeto na faculdade em 2018, 
-esse projeto foi feito utilizando HTML5 e CSS3 sem o auxílio de frameworks.
+<!--ts-->
+<p>
+ <a href="#Sobre">Sobre</a> •  
+ <a href="#Características">Características</a> • 
+ <a href="#Status">Status do Projeto</a> • 
+ <a href="#Requisitos">Requisitos Mínimos</a> 
+ :open_file_folder:
+</p>
+<!--te-->
 
-## Características
+<a name="Sobre"></a>
+## Sobre :information_source:
 
-* Possúi 5 páginas, a página index , página de pesquisa, página de contato, página de cadastro, e página de login.
-cada página possúi sua folha de estilo própria e todas as páginas utilizam a folha de estilo main.
+Feito em 2018 esse projeto foi o requisito final para que eu concluísse a disciplina de Linguagem de Marcação 
+nele é explorado um vasto grupo de funcionalidades da linguagem de marcação HTML5 somado ao CSS3.
+
+![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+<a name="Características"></a>
+## Características :page_facing_up:
+
+* Possui 5 páginas, a página index , página de pesquisa, página de contato, página de cadastro, e página de login.
+cada página possui sua folha de estilo própria e todas as páginas utilizam a folha de estilo main.
 
 * Faz utilização de seletores na estilização com CSS: ID, class, cascata e herança, pseudo-classes e pseudo-elementos.
 
-  img1 aqui
+  ![](https://raw.githubusercontent.com/HenriquePRA/Byte-Barrage/screenshots/screenshots/img1.jpg)
   
-* Faz uso de animações e transitions e transform.
+* Faz uso de animações, transitions e transform.
 
-  img2 aqui
+  ![](https://raw.githubusercontent.com/HenriquePRA/Byte-Barrage/screenshots/screenshots/img2.jpg)
 
-* Posicionamento de elementos utilizando conceito de layout em CSS: grid, flexbox,float, position.
+* Posicionamento de elementos utilizando conceito de layout em CSS: grid, flexbox, float e position.
 
-  img3 aqui
+  ![](https://raw.githubusercontent.com/HenriquePRA/Byte-Barrage/screenshots/screenshots/img3.jpg)
 
-* Possui design responsivel desde dispositivos mobile com tela pequena até disposítivos em 4K.
+* Possui design responsivo desde dispositivos mobile com tela pequena até dispositivos com resolução 4K.
 
   * Mobile
   
-  img4 aqui
+  ![](https://raw.githubusercontent.com/HenriquePRA/Byte-Barrage/screenshots/screenshots/img4.jpg)
   
   * 4K
   
-  img5 aqui
+  ![](https://raw.githubusercontent.com/HenriquePRA/Byte-Barrage/screenshots/screenshots/img5.jpg)
   
+<a name="Status"></a>
+## Status do Projeto :tada:
+Finalizado :v:
 
-## Requisitos Mínimos
+<a name="Requisitos"></a>
+## Requisitos Mínimos :computer:
 
 1. Navegador com suporte a HTML5 e CSS3.
-2. Dispositivo com largura de tela miníma de 350px e máxima de 2560px.
+2. Dispositivo com largura de tela mínima de 350 pixels.
+3. Dispositivo com largura de tela máxima de 2560 pixels.
+
+## Rodando o projeto :running: 
+
+1. Clone o repositório.
+2. Execução do arquivo index.html por um navegador de preferência.
