@@ -1,4 +1,4 @@
-# :books: Byte Barrage :books:
+# Byte Barrage :books:
 
 <!--ts-->
 <p>
